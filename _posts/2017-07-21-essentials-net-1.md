@@ -2,6 +2,7 @@
 layout: post
 title: Essentials .NET &#x23;1 - 21 July, 2017
 comments: true
+categories: [ 'essentials', 'daily', '.net', 'links' ]
 ---
 
 - [NuGet.org Gets a Facelift](http://blog.nuget.org/20170718/NuGet-Gallery-Gets-A-Facelift.html)
