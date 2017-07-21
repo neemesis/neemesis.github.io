@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Essential .NET #1
+title: Essential .NET #1 - 21 July, 2017
 ---
 
 - [NuGet.org Gets a Facelift](http://blog.nuget.org/20170718/NuGet-Gallery-Gets-A-Facelift.html)
