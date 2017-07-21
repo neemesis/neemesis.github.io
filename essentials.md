@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Essentials .NET Posts
+title: .NET Essentials
 ---
 
 <div class="posts">

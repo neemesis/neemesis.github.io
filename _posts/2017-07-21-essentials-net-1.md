@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Essentials .NET &#x23;1 - 21 July, 2017
+title: .NET Essentials &#x23;1 - 21 July, 2017
 comments: true
 categories: [ 'essentials', 'daily', '.net', 'links' ]
 ---
