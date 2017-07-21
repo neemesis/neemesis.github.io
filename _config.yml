@@ -27,4 +27,4 @@ github:
   repo:           https://github.com/neemesis/neemesis.github.io
 
 # Plugins
-plugins:          [jekyll-paginate]
+plugins:          [jekyll-paginate, liquid_reading_time]
