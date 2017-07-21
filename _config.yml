@@ -12,6 +12,7 @@ tagline:          "Mirche Toshevski's Blog"
 description:      '.NET developer, interested in <a href="https://www.asp.net/">ASP.NET</a>, <a href="https://www.xamarin.com/">Xamarin</a>, <a href="#">MSSQL</a>, fan of <a href="http://www.bbc.co.uk/programmes/b006q2x0">Doctor Who</a>'
 url:              https://neemesis.github.io
 baseurl:          /
+hometitle:        "Posts"
 
 author:
   name:           'Mirche Toshevski'
