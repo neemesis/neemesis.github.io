@@ -39,7 +39,7 @@ accept.
 Then we need to define action filters that is going to control resources
 invokation.
 
-First create folder **ActionFilters **in base of the project, and add new class
+First create folder **ActionFilters** in base of the project, and add new class
 named **LocalisationAttribute** inherited from **ActionFilterAttribute.**
 
 ![](https://cdn-images-1.medium.com/max/800/1*lTECrGedjyOtwemgN2dzhA.png)
