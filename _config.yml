@@ -6,7 +6,7 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            "Mirche Toshevski Blog"
+title:            "Mirche Toshevski"
 tagline:          "Mirche Toshevski's Blog"
 #description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 description:      '.NET developer, interested in <a href="https://www.asp.net/">ASP.NET</a>, <a href="https://www.xamarin.com/">Xamarin</a>, <a href="#">MSSQL</a>, fan of <a href="#">Doctor Who</a>'
