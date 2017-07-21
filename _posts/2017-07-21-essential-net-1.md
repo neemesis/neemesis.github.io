@@ -9,3 +9,5 @@ title: Essential .NET &#x23;1 - 21 July, 2017
 - [Learning Xamarin.Forms – Part 4: Layout and Views](http://jesseliberty.com/2017/07/19/learning-xamarin-forms-part-4-layout-and-views/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+JesseLiberty-SilverlightGeek+%28Jesse+Liberty%29)
 - [SQL Server 2016 ColumnStore Index String Predicate Pushdown](https://www.mssqltips.com/sqlservertip/4942/sql-server-2016-columnstore-index-string-predicate-pushdown/)
 - [Why does the assignment operator in C# evaluate left to right instead of right to left?](https://blogs.msdn.microsoft.com/oldnewthing/20170718-00/?p=96635)
+- [Introducing ASP.NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/webdev/2017/06/28/introducing-asp-net-core-2-0-preview-2/)
+- [Azure Functions Tools Roadmap](https://blogs.msdn.microsoft.com/webdev/2017/04/14/azure-functions-tools-roadmap/)
