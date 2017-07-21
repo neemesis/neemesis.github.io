@@ -63,6 +63,7 @@ html {
 .img-circle {
     border-radius: 50%;
     transition-duration: 1s;
+    margin: 1rem auto;
 }
 
 .img-circle:hover {
