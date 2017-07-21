@@ -15,6 +15,7 @@ title: Essentials .NET Posts
         </h1>
 
         <span class="post-date">{{ post.date | date_to_string }} &middot; Read this in {{ post.content | reading_time }}</span>
+        {{ post.content }}
       </div>
     {% endif %}
   {% endfor %}
