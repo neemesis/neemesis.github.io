@@ -61,6 +61,8 @@ html {
 }
 
 .img-circle {
+    width: 28vh;
+    height: 28vh;
     border-radius: 50%;
     transition-duration: 1s;
     margin: 1rem auto;
@@ -96,11 +98,11 @@ html {
 
 /* Sidebar nav */
 .sidebar-nav {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .sidebar-nav-item {
   display: block;
-  line-height: 1.75;
+  line-height: 1.4;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
