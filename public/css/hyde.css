@@ -61,8 +61,8 @@ html {
 }
 
 .img-circle {
-    width: 28vh;
-    height: 28vh;
+    width: 24vh;
+    height: 24vh;
     border-radius: 50%;
     transition-duration: 1s;
     margin: 1rem auto;
@@ -78,7 +78,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 16rem;
     text-align: left;
   }
 }
@@ -93,7 +93,7 @@ html {
   color: #fff;
   margin-top: 0;
   font-family: "Abril Fatface", serif;
-  font-size: 2.8rem;
+  font-size: 2rem;
 }
 
 /* Sidebar nav */
@@ -142,7 +142,7 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48em) {
   .content {
     max-width: 38rem;
-    margin-left: 20rem;
+    margin-left: 16rem;
     margin-right: 2rem;
   }
 }
