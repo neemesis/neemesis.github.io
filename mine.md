@@ -9,7 +9,7 @@ title: Mine Posts
     {% if post.categories contains 'mine' %}
        <div class="post">
         <h1 class="post-title">
-          <a href="{{ post.url }}">
+          <a href="{{ post.url }}" onclick="ga('send', 'event', 'Mine', 'Open-' + {{ post.title }}, '{{ post.url }}}', 10, { 'nonInteraction': 1 });">
             {{ post.title }}
           </a>
         </h1>
