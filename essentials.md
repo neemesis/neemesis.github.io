@@ -9,7 +9,7 @@ title: .NET Essentials
     {% if post.categories contains 'essentials' %}
        <div class="post">
         <h1 class="post-title">
-          <a href="{{ post.url }}">
+          <a href="{{ post.url }}" onclick="ga('send', 'event', 'Essentials', 'Open-{{ post.title }}', '{{ post.url }}}'>
             {{ post.title }}
           </a>
         </h1>
