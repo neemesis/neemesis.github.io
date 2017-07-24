@@ -3,6 +3,8 @@ layout: post
 title: .NET Essentials &#x23;4 - 24 July, 2017
 comments: true
 categories: [ 'essentials', 'daily', '.net', 'links' ]
+lang: en-US
+author: Mirche Toshevski
 ---
 
 - [ASP.NET Core Razor Pages – Introduction](https://codingblast.com/asp-net-core-razor-pages/)

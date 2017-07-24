@@ -3,6 +3,8 @@ layout: post
 title: .NET Essentials &#x23;2 - 22 July, 2017
 comments: true
 categories: [ 'essentials', 'daily', '.net', 'links' ]
+lang: en-US
+author: Mirche Toshevski
 ---
 
 - [Blazor Brings .NET Back to the Browser](https://www.infoq.com/news/2017/07/Blazor?utm_campaign=.NET%2BNews&utm_medium=email&utm_source=.NET_News_135)

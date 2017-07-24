@@ -16,12 +16,14 @@ hometitle:        "Posts"
 
 author:
   name:           'Mirche Toshevski'
-  url:            https://twitter.com/
+  url:            https://www.linkedin.com/in/mirche-toshevski-9918b6108/
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          1.0.0.0
+
+logo:             /assets/home1.jpg
 
 github:
   repo:           https://github.com/neemesis/neemesis.github.io

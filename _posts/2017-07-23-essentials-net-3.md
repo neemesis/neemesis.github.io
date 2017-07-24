@@ -3,6 +3,8 @@ layout: post
 title: .NET Essentials &#x23;3 - 23 July, 2017
 comments: true
 categories: [ 'essentials', 'daily', '.net', 'links' ]
+lang: en-US
+author: Mirche Toshevski
 ---
 
 - [IP Address Mapping in Power BI](https://blogs.msdn.microsoft.com/samlester/2017/07/23/ipaddressmappinginpowerbi/)

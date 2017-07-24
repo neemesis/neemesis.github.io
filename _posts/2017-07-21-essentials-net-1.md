@@ -3,6 +3,8 @@ layout: post
 title: .NET Essentials &#x23;1 - 21 July, 2017
 comments: true
 categories: [ 'essentials', 'daily', '.net', 'links' ]
+lang: en-US
+author: Mirche Toshevski
 ---
 
 - [NuGet.org Gets a Facelift](http://blog.nuget.org/20170718/NuGet-Gallery-Gets-A-Facelift.html)
