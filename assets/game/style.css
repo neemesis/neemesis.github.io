@@ -1,0 +1,17 @@
+canvas {
+  display : block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:25px;
+}
+.gameLab {
+  display:none;
+  color:#dc322f;
+}
+.gameDiv {
+  display:block;
+  width:400px;
+  
+  margin:auto;
+}
+
