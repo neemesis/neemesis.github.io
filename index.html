@@ -7,7 +7,7 @@ title: Home
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}" onclick="ga('send', 'event', 'Homepage', 'Open-{{ post.title }}', '{{ post.url }}', 10, { 'nonInteraction': 1 });">
+      <a href="{{ post.url }}" onclick="ga('send', 'event', 'Homepage', 'O: {{ post.title }}', '{{ page.url }}', 10, { 'nonInteraction': 1 });">
         {{ post.title }}
       </a>
     </h1>
@@ -22,15 +22,15 @@ title: Home
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}" onclick="ga('send', 'event', 'Homepage', 'Older-Clicked', '{{ site.baseurl }}page{{paginator.next_page}}', 10, { 'nonInteraction': 1 });">Older</a>
   {% else %}
     <span class="pagination-item older">Older</span>
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}" onclick="ga('send', 'event', 'Homepage', 'Newer-Clicked', '{{ site.baseurl }}', 10, { 'nonInteraction': 1 });">Newer</a>
     {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}" onclick="ga('send', 'event', 'Homepage', 'Newer-Clicked', '{{ site.baseurl }}page{{paginator.previous_page}}', 10, { 'nonInteraction': 1 });">Newer</a>
     {% endif %}
   {% else %}
     <span class="pagination-item newer">Newer</span>
