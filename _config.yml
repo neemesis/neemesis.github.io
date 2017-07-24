@@ -27,4 +27,4 @@ github:
   repo:           https://github.com/neemesis/neemesis.github.io
 
 # Plugins
-plugins:          [jekyll-paginate]
+plugins:          [jekyll-paginate, jekyll-sitemap, jekyll-seo-tag]

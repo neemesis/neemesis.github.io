@@ -1,4 +1,4 @@
 User-Agent: *
-
+Sitemap: https://neemesis.github.io/sitemap.xml
 Allow: /
 
