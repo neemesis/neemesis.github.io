@@ -68,10 +68,6 @@ html {
     margin: 1rem auto;
 }
 
-.img-circle:hover {
-  transform: rotate(360deg);
-}
-
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;

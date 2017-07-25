@@ -13,3 +13,4 @@ author: Mirche Toshevski
 - [JWT RSA & HMAC + ASP.NET Core](http://piotrgankiewicz.com/2017/07/24/jwt-rsa-hmac-asp-net-core/)
 - [Genetic Algorithm, in Reverse Mode](https://blogs.msdn.microsoft.com/eugene_bobukh/2017/07/24/genetic-algorithm-in-reverse-mode/)
 - [Scaling Scrum with Nexus in VSTS](https://blogs.msdn.microsoft.com/premier_developer/2017/07/24/scaling-scrum-with-nexus-in-vsts/)
+- [Difference between sliding expiration and absolute expiration](https://weblogs.asp.net/jalpeshpvadgama/difference-between-sliding-expiration-and-absolute-expiration)
