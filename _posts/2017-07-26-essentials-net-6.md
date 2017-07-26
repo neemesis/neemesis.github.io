@@ -18,3 +18,5 @@ author: Mirche Toshevski
 - [Getting started with F# and .NET Core](http://julienblanchard.com/2017/getting-started-with-fsharp-and-dotnet-core/)
 - [Get started with WPF viewer for reports, PDFs, and SSRS](http://our.componentone.com/2017/07/25/get-started-wpf-viewer-for-reports-pdfs-and-ssrs/)
 - [Xamarin.Tip – Borderless DatePicker](https://alexdunn.org/2017/07/25/xamarin-tip-borderless-datepicker/)
+- [New Extensions for Visual Studio 2017](https://visualstudiomagazine.com/articles/2017/07/01/new-extensions.aspx)
+- [Xamarin App Developer Links - 2017-07-26](https://www.allaboutxamarin.com/2017/07/xamarin-app-developer-links-2017-07-26/)
