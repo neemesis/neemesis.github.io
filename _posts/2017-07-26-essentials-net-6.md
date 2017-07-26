@@ -13,3 +13,5 @@ author: Mirche Toshevski
 - [Local Functions – What’s the Value?](https://csharp.christiannagel.com/2017/07/25/localfunctions/)
 - [Using Google OAuth 2.0 authorization server in Azure API Management](https://blogs.msdn.microsoft.com/david_burgs_blog/2017/07/25/using-google-oauth-2-0-authorization-server-in-azure-api-management/)
 - [Introducing the Power BI solution template for Credit and Collections](https://blogs.msdn.microsoft.com/dynamicsaxbi/2017/07/25/introducing-the-power-bi-solution-template-for-credit-and-collections/)
+- [Project Prague: Revolutionizing User experiences using Natural User Interfaces](https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/07/26/project-prague-revolutionizing-user-experiences-using-natural-user-interfaces/)
+- [Understanding states in Release Management](https://blogs.msdn.microsoft.com/divman/2017/07/25/understanding-states-in-release-management/)
