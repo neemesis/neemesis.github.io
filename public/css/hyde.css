@@ -69,6 +69,12 @@ html {
     transform: translateZ(20px)
 }
 
+.img-wrapper {
+  color: rgba(255,255,255,.1);
+  border-radius: 50%; 
+  transform-style: preserve-3d;
+}
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
