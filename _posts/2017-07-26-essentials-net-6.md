@@ -15,3 +15,6 @@ author: Mirche Toshevski
 - [Introducing the Power BI solution template for Credit and Collections](https://blogs.msdn.microsoft.com/dynamicsaxbi/2017/07/25/introducing-the-power-bi-solution-template-for-credit-and-collections/)
 - [Project Prague: Revolutionizing User experiences using Natural User Interfaces](https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/07/26/project-prague-revolutionizing-user-experiences-using-natural-user-interfaces/)
 - [Understanding states in Release Management](https://blogs.msdn.microsoft.com/divman/2017/07/25/understanding-states-in-release-management/)
+- [Getting started with F# and .NET Core](http://julienblanchard.com/2017/getting-started-with-fsharp-and-dotnet-core/)
+- [Get started with WPF viewer for reports, PDFs, and SSRS](http://our.componentone.com/2017/07/25/get-started-wpf-viewer-for-reports-pdfs-and-ssrs/)
+- [Xamarin.Tip – Borderless DatePicker](https://alexdunn.org/2017/07/25/xamarin-tip-borderless-datepicker/)
