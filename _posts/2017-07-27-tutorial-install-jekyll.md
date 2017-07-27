@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tutorial: Install Jekyll on Windows in few easy steps
+title: Jekyll Tutorial - Part 1%3A Install Jekyll on Windows in few easy steps
 comments: true
 categories: [ 'tutorial', 'install', 'jekyll', 'windows' ]
 lang: en-US
