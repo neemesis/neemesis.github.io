@@ -2,7 +2,7 @@
 layout: page
 title: Mine Posts
 ---
-
+ Total&colon; {{ site.categories.mine | size }}
 <div class="posts">
   <hr />
   {% for post in site.posts %}
