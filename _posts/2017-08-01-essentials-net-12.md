@@ -14,3 +14,4 @@ author: Mirche Toshevski
 - [C# module for HTTP to HTTPS redirection for custom ports by reading them from AppHost.config](https://blogs.msdn.microsoft.com/surajdixit/2017/07/29/c-sharp-http-module-for-http-to-https-for-custom-ports/)
 - [Big Memory .NET Part 1 – The Challenges in Handling 1 Billion Resident Business Objects](https://www.infoq.com/articles/Big-Memory-Part-1)
 - [Big Memory .NET Part 2 - Pile, Our Big Memory Solution for .NET](https://www.infoq.com/articles/Big-Memory-Part-2)
+- [Using MongoDB with Web API and ASP.NET Core](http://www.dotnetcurry.com/aspnet-mvc/1267/using-mongodb-nosql-database-with-aspnet-webapi-core)
