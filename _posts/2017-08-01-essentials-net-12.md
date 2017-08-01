@@ -12,3 +12,5 @@ author: Mirche Toshevski
 - [Getting IIS Win Auth to Work in a Container](https://blogs.msdn.microsoft.com/containerstuff/2017/07/31/getting-iis-win-auth-to-work-in-a-container/)
 - [Windows Subsystem for Linux out of Beta!](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/)
 - [C# module for HTTP to HTTPS redirection for custom ports by reading them from AppHost.config](https://blogs.msdn.microsoft.com/surajdixit/2017/07/29/c-sharp-http-module-for-http-to-https-for-custom-ports/)
+- [Big Memory .NET Part 1 – The Challenges in Handling 1 Billion Resident Business Objects](https://www.infoq.com/articles/Big-Memory-Part-1)
+- [Big Memory .NET Part 2 - Pile, Our Big Memory Solution for .NET](https://www.infoq.com/articles/Big-Memory-Part-2)
