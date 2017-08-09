@@ -15,7 +15,7 @@ First we need to create connection to the database:
 ```csharp
 public IDbConnection Db => new SqlConnection(_options.DefaultConnection);
 ```
-we will use **Db** for all queries.
+**DefaultConnection** is our default **connectionString**. We will use **Db** for all queries.
 
 Single table query
 ------
