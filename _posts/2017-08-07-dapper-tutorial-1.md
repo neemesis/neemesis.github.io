@@ -47,7 +47,7 @@ Parameters for **Dapper** methods
 ------
 * **Anonymous**: new {Id = itemId, Type = importType}
 * **Dynamic**
-	* <script src="https://gist.github.com/neemesis/dfb3ffa31353b7fa73408e9191065fc1"></script>
+    * <script src="https://gist.github.com/neemesis/dfb3ffa31353b7fa73408e9191065fc1.js"></script>
 * **List**: new {IdList = new[]{item1Id, item2Id, item3Id} }
 * **String**: new {Id = new DbString {Id = "item1Id", IsFixedLength = false, Length = 6, IsAnsi = true}}
 
