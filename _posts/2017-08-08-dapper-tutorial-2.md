@@ -8,6 +8,7 @@ author: Mirche Toshevski
 ---
 * [Dapper Tutorial - Part 1: Dapper Intro and Installation](https://neemesis.github.io/blog/2017/08/07/dapper-tutorial-1/)
 * [Dapper Tutorial - Part 2: Dapper Queries](https://neemesis.github.io/blog/2017/08/08/dapper-tutorial-2/)
+* [Dapper Tutorial - Part 3: Simple CRUD](https://neemesis.github.io/blog/2017/08/09/dapper-tutorial-3/)
 
 Setup
 -------
