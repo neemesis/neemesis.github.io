@@ -93,15 +93,15 @@ The syntax for querying multiple tables is
 ```csharp
 var result = Db.Query<TClass1, TClass2, ..., TClassN, TResult>(
 "select * from Table1 
- left join Table2 on Table1.T2Id = Table2.Id
+ left join TResult on TResult.T2Id = Table2.Id
  ...
  left join TableN on TableM.TNId = TableM.Id",
-	(tc1, tc2, ..., tcN) => { 
-    	tc1.TC2 = tc2;
+ (tres, tc2, ..., tcN) => { 
+    	tres.TC2 = tc2;
         ...
-        tcN.TCM = tcM;
-    	return tc1;
-	});
+        tres.TCM = tcN;
+    	return tres;
+ });
 ```
 you can use other join's as well. The main thing here is that **TClass1** should correspond to **Table1**. **Dapper** splits row on **Id** column by default if you have tables with other name for **Id** you should use **splitOn** variable in **Query** method, like this
 ```csharp
