@@ -148,6 +148,14 @@ returns
 ```
 this way you can pass all the parameters you need.
 
+Querying scalar values
+------
+We can also query scalar values, this is usefull if we need to count entries for specific query
+```csharp
+var count = Db.ExecuteScalar<int>("select count(*) from Countries");
+```
+and the result is integer value of **246**.
+
 Stored Procedures
 ------
 **Dapper** also allow us to execute and map stored procedures in the same way we did with queries.
