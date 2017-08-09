@@ -21,7 +21,7 @@ Single table query
 ------
 Selecting all the object from the table and mapping them to class
 ```csharp
-var result = Db.Query<Model>("select * from Models");
+var result = Db.Query<Models.Model>("select * from Models");
 ```
 and the result is (JSON printed)
 ```json
