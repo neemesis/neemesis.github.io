@@ -6,6 +6,9 @@ categories: [ 'tutorial', 'install', 'dapper', 'micro', 'mine', 'orm', 'mssql', 
 lang: en-US
 author: Mirche Toshevski
 ---
+* [Dapper Tutorial - Part 1: Dapper Intro and Installation](https://neemesis.github.io/blog/2017/08/07/dapper-tutorial-1/)
+* [Dapper Tutorial - Part 2: Dapper Queries](https://neemesis.github.io/blog/2017/08/08/dapper-tutorial-2/)
+
 Intro to **Dapper**
 ------
 **Dapper** is simple object mapper written in .NET and titled by many **Number 1 Micro ORM**. In terms of speed it is almost as fast as raw **ADO.NET** data reader. Basically **Dapper** extends **IDbConnection** object and provides additional methods and interfaces for querying data.
