@@ -2,7 +2,7 @@
 layout: page
 title: .NET Essentials
 ---
-Total&colon; {{ site.categories.essentials | size }}
+Total: {{ site.categories.essentials | size }}
 <div class="posts">
   <hr />
   {% for post in site.posts %}
