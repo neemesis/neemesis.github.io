@@ -7,7 +7,7 @@ title: Mine Posts
   <hr />
   {% for post in site.posts %}
     {% if post.categories contains 'mine' %}
-       <div class="post">
+       <div class="post" style="margin-bottom: 0;">
         <h1 class="post-title">
           <a href="{{ post.url }}" onclick="ga('send', 'event', 'Mine', 'O: {{ post.title }}', '{{ page.url }}}', 10, { 'nonInteraction': 1 });">
             {{ post.title }}
