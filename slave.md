@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Slave
+title: Slave Tool
 ---
  Total: {{ site.categories.mine | size }}
 <div class="posts">
