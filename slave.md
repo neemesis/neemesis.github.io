@@ -2,7 +2,7 @@
 layout: page
 title: Slave Tool
 ---
- Total: {{ site.categories.mine | size }}
+ Total: {{ site.categories.slave | size }}
 <div class="posts">
   <hr />
   {% for post in site.posts %}
