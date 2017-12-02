@@ -1,8 +1,8 @@
 ---
 layout: post
-title: ASP.NET Core 2.0&colon; Authorization in Data Layer
+title: ASP.NET Core 2.0&colon; Identity in Data Layer
 comments: true
-categories: [ 'mine', 'asp', 'net', 'authorization', 'data', 'layer' ]
+categories: [ 'mine', 'asp', 'net', 'identity', 'data', 'layer' ]
 lang: en-US
 author: Mirche Toshevski
 ---
