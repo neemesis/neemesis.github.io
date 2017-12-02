@@ -23,7 +23,7 @@ How **Dapper** works
 Install **Dapper**
 ------
 Easiest way to install **Dapper** is through **NuGet**. The command to install the package is **Install-Package Dapper**, but you can also install it from **NuGet Package Explorer**
-![too](../assets/images/dt1_1.jpg 'NuGet Package Explorer')
+![too](/assets/images/dt1_1.jpg 'NuGet Package Explorer')
 
 Database Requirements
 ------

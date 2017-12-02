@@ -30,7 +30,7 @@ Installation
 ------
 * You can either download the **SimpleCRUD.cs** file from [here](https://github.com/ericdc1/Dapper.SimpleCRUD/blob/master/Dapper.SimpleCRUD/SimpleCRUD.cs), and if you want dynamic support like **async** you need to dofnload this file also **[SimpleCRUDAsync.cs](https://github.com/ericdc1/Dapper.SimpleCRUD/blob/master/Dapper.SimpleCRUD%20NET45/SimpleCRUDAsync.cs)**.
 * You can install it from **NuGet** with this command **Install-Package Dapper.SimpleCRUD** or via **NuGet Package Explorer**
-![too](../assets/images/dt3_1.png 'NuGet Package Explorer')
+![too](/assets/images/dt3_1.png 'NuGet Package Explorer')
 
 Attributes
 ------

@@ -34,7 +34,7 @@ Here we are going to setup our solution for repository pattern. This is pretty s
 4. Create the following folders in **BL** project&colon; **Models**, **Interfaces**, **Services**, **Stores**, **Mappings**
 
 After this steps you should have project structure similar to this
-![Visual Studio Solution](../assets/images/adlanc_1.png 'Visual Studio Solution')
+![Visual Studio Solution](/assets/images/adlanc_1.png 'Visual Studio Solution')
 
 Now we can start implementing the actual logic.
 
@@ -362,13 +362,13 @@ public class DatabaseConnectionService : IDatabaseConnectionService {
 ```
 We have succesfully implemented our Data Layer.
 Now your data layer should look like this.
-![Visual Studio Solution](../assets/images/adlanc_2.png 'Visual Studio Solution')
+![Visual Studio Solution](/assets/images/adlanc_2.png 'Visual Studio Solution')
 
 ## Business Layer - BL Project
 Next we need to define our **Store**'s for managing **User**'s and **Role**'s
 #### 1. Defining Models
 We need **User** and **Role** model in **BL** project in **Models** folder. Copy them from **DL.Models** but make sure to change the namespace to **BL.Models**
-![Visual Studio Solution](../assets/images/adlanc_3.png 'Visual Studio Solution')
+![Visual Studio Solution](/assets/images/adlanc_3.png 'Visual Studio Solution')
 #### 2. Defining Interfaces
 In **BL** for now we only need two interfaces **IUserStore** and **IRoleStore**
 Put them in **BL.Interfaces** folder.
@@ -467,7 +467,7 @@ public class MappingProfile : Profile {
 }
 ```
 Your Business Layer should look like this:
-![Visual Studio Solution](../assets/images/adlanc_4.png 'Visual Studio Solution')
+![Visual Studio Solution](/assets/images/adlanc_4.png 'Visual Studio Solution')
 
 ## Presentation Layer - DLAuth Project
 Now we need to configure our **ASP.NET Core** site to use our implementation.
@@ -609,7 +609,7 @@ to
 @inject UserManager<BL.Models.User> UserManager
 ```
 Your final solution should look something like this
-![Visual Studio Solution](../assets/images/adlanc_5.png 'Visual Studio Solution')
+![Visual Studio Solution](/assets/images/adlanc_5.png 'Visual Studio Solution')
 
 ## Database
 1. Create new Database, let's name it **AuthTestDB**
