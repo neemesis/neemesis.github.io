@@ -634,4 +634,4 @@ Your DB should look like this
 ## Final
 You can now try to register new account, and log in.
 
-# [Open on GitHub](https://github.com/neemesis/PrivateNuGetRepository)
+# [Open on GitHub](https://github.com/neemesis/DLAuth)
