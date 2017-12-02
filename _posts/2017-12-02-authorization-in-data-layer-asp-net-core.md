@@ -629,7 +629,7 @@ Your final solution should look something like this
 }
 ```
 Your DB should look like this
-![Visual Studio Solution](../assets/images/adlanc_6.png 'Visual Studio Solution')
+![Visual Studio Solution](/assets/images/adlanc_6.png 'Visual Studio Solution')
 
 ## Final
 You can now try to register new account, and log in.
