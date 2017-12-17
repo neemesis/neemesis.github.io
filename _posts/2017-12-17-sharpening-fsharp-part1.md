@@ -7,6 +7,10 @@ lang: en-US
 author: Mirche Toshevski
 ---
 
+## Posts
+* **Part 1 - Installation and Intro**
+* [**Part 2 - Records, lists, sequences…**](https://neemesis.github.io/blog/2017/12/17/sharpening-fsharp-part2/)
+
 ## Intro 
 **F#** is mature, open source, cross-platform, functional programming language. **F#** is developed by [**F# Software Foundation**](http://foundation.fsharp.org/) and [**Microsoft**](https://docs.microsoft.com/en-us/dotnet/fsharp/). **F#** is a **meta language** and is implementation of **OCaml** for **.NET framework**. You can read more about it at [**Wikipedia**](https://goo.gl/D5S3r1) and [**F# Software Foundation**](http://fsharp.org/).
 

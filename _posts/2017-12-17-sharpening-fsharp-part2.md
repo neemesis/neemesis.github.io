@@ -9,6 +9,7 @@ author: Mirche Toshevski
 
 ## Previous posts
 * [**Part 1 - Installation and Intro**](https://neemesis.github.io/blog/2017/12/17/sharpening-fsharp-part1/)
+* **Part 2 - Records, lists, sequences…**
 
 ## Intro 
 This post will be extension to the previous one, as we will continue to explore other features of **F#**.
