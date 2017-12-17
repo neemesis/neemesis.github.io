@@ -296,6 +296,6 @@ printTuple res11 // Name: "Name", Year: 2017, Month: 3, Day 2
 ```
 
 ## Final
-You can download the code from GitHub, or try to follow this post steb by step.
+You can download the code from GitHub, or try to follow this post step by step.
 
 # [Open on GitHub](https://github.com/neemesis/SharpeningFSharp/tree/master/Part1)
