@@ -2,9 +2,11 @@
 layout: post
 title: Create private NuGet Server
 comments: true
-categories: [ 'mine', 'create', 'private', 'nuget', 'server', 'feed' ]
+categories: [ 'C#', 'NuGet' ]
 lang: en-US
 author: Mirche Toshevski
+image: /assets/covers/c1.jpg
+image-sm: /assets/covers/c1s.jpg
 ---
 **NuGet** is the package manager for .NET, and **NuGet Gallery** is the place where most of the wide used packages rest and are publicly available. If you want to make you packages available only to your team / company you have few options, you will either pay for private feed, share packages via file transfer / storage sites or make your own **NuGet Server**.
 ## What we need for NuGet server?

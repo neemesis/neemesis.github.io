@@ -2,9 +2,11 @@
 layout: post
 title: Dapper Tutorial - Part 3&colon; Simple CRUD
 comments: true
-categories: [ 'tutorial', 'install', 'dapper', 'micro', 'mine', 'orm', 'mssql', 'mysql' ]
+categories: [ 'C#', 'Dapper' ]
 lang: en-US
 author: Mirche Toshevski
+image: /assets/covers/c4.jpg
+image-sm: /assets/covers/c4s.jpg
 ---
 * [Dapper Tutorial - Part 1: Dapper Intro and Installation](https://neemesis.github.io/blog/2017/08/07/dapper-tutorial-1/)
 * [Dapper Tutorial - Part 2: Dapper Queries](https://neemesis.github.io/blog/2017/08/08/dapper-tutorial-2/)

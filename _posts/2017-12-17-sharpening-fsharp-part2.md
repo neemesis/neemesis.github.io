@@ -2,9 +2,11 @@
 layout: post
 title: Sharpening F#&colon; Part 2 - Records, lists, sequences…
 comments: true
-categories: [ 'sharpeningfsharp', 'mine', 'fsharp', 'net', 'functional', 'intro' ]
+categories: [ 'F#', 'Sharpening-F#' ]
 lang: en-US
 author: Mirche Toshevski
+image: /assets/covers/c5.jpg
+image-sm: /assets/covers/c5s.jpg
 ---
 
 ## Previous posts

@@ -2,9 +2,11 @@
 layout: post
 title: Localisation in ASP.NET MVC
 comments: true
-categories: [ 'localisation', 'asp.net', 'mvc', 'mine' ]
+categories: [ 'C#', 'ASP.NET' ]
 lang: en-US
 author: Mirche Toshevski
+image: /assets/covers/c6.jpg
+image-sm: /assets/covers/c6s.jpg
 ---
 
 Localisation is a process of customizing our project to respond to different

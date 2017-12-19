@@ -2,9 +2,11 @@
 layout: post
 title: Sharpening F#&colon; Part 1 - Installation and Intro
 comments: true
-categories: [ 'sharpeningfsharp', 'mine', 'fsharp', 'net', 'functional', 'intro' ]
+categories: [ 'F#', 'Sharpening-F#' ]
 lang: en-US
 author: Mirche Toshevski
+image: /assets/covers/c9.jpg
+image-sm: /assets/covers/c9s.jpg
 ---
 
 ## Posts

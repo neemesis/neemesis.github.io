@@ -2,9 +2,11 @@
 layout: post
 title: ASP.NET Core 2.0&colon; Identity in Data Layer
 comments: true
-categories: [ 'mine', 'asp', 'net', 'identity', 'data', 'layer' ]
+categories: [ 'C#', 'ASP.NET-Core' ]
 lang: en-US
 author: Mirche Toshevski
+image: /assets/covers/c8.jpg
+image-sm: /assets/covers/c8s.jpg
 ---
 When you use repository pattern you want your **DB** operations to be in **Data Layer**, but when you create **ASP.NET Core** site with **Individual User Accounts**, **Visual Studio** automatically creates **ApplicationDbContext** in your presentation layer and binds your presentation layer with your data layer.
 
