@@ -18,6 +18,7 @@ profile_img: "../../../../../assets/covers/homer-simpson.jpeg"
 profile: '.NET developer, interested in ASP.NET, Xamarin, MSSQL, fan of Doctor Who'
 social: 
   github: "https://github.com/neemesis/"
+  linkedin: "https://www.linkedin.com/in/mirche-toshevski-9918b6108/"
 
 # Build settings
 exclude: ["_screenshots", "Gemfile", "Gemfile.lock", "LICENSE.txt", "README.md"]
