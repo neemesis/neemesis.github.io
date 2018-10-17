@@ -28,3 +28,18 @@
 .bg-white {
   background-color: $color-white;
 }
+
+#disqus_thread {
+  opacity: 0.1;
+}
+
+@keyframes tovisible {
+  from { opacity: 0.1; }
+  to { opacity: 1; }
+}
+
+#disqus_thread:hover {
+  opacity: 1;
+  animation-name: tovisible;
+  animation-duration: 0.5s;
+}
