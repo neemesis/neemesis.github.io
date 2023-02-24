@@ -1,0 +1,603 @@
+<html>
+
+<head>
+    <title>Калкулатор на потрошена електрична енергија</title>
+    <meta name="description" content="Калкулатор за потрошена електрична енергија со пресметка по блокови">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:title" property="og:title" content="Калкулатор на потрошена електрична енергија">
+    <meta name="keywords" content="struja, blokovi, evn, струја, скапа, евтина, evtina, skapa, kalkulator">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+        <div class="container max-w-screen-lg mx-auto">
+            <div>
+                <!-- <h2 class="font-semibold text-xl text-gray-600">Калкулатор на струја</h2>
+                <p class="text-gray-500 mb-6">Form is mobile responsive. Give it a try.</p> -->
+
+                <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+                    <!-- <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+                        <div class="text-gray-600">
+                            <h2 class="font-medium text-lg">Калкулатор за потрошувачка на струја</h2>
+                            <p><a href="https://www.evn.mk/AboutInvoices/TariffSystem.aspx">EVN Tariff System</a>, <a href="https://erc.org.mk/page.aspx?id=478">Калкулатор</a></p>
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+
+                                <div class="md:col-span-5 relative flex py-5 items-center">
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                    <span class="flex-shrink mx-4 text-gray-400">Потрошено</span>
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                </div>
+
+
+                                <div class="md:col-span-2 text-emerald-700">
+                                    <label for="full_name">Вкупно скапа тарифа</label>
+                                    <input type="number" name="totalH" id="totalH"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="0" />
+                                </div>
+
+                                <div class="md:col-span-2 text-emerald-700">
+                                    <label for="full_name">Вкупно евтина тарифа</label>
+                                    <input type="number" name="totalL" id="totalL"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="0" />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно такса</label>
+                                    <input type="number" name="priceTax" id="priceTax"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="184" />
+                                </div>
+
+                                <div class="md:col-span-5 relative flex py-5 items-center">
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                    <span class="flex-shrink mx-4 text-gray-400">Моментални цени (ден/kWh)</span>
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Цена ВТ1</label>
+                                    <input type="number" name="priceH1" id="priceH1"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="4.7257" />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Цена ВТ2</label>
+                                    <input type="number" name="priceH2" id="priceH2"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="5.1578" />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Цена ВТ3</label>
+                                    <input type="number" name="priceH3" id="priceH3"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="6.0563" />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Цена ВТ4</label>
+                                    <input type="number" name="priceH4" id="priceH4"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="16.1336" />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Цена НТ</label>
+                                    <input type="number" name="priceL" id="priceL"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="1.3183" />
+                                </div>
+
+                                <div class="md:col-span-1">
+
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">kWh Од - ВТ2</label>
+                                    <input type="number" name="rangeKwhFromH2" id="rangeKwhFromH2"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="211" />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">kWh Од - ВТ3</label>
+                                    <input type="number" name="rangeKwhFromH3" id="rangeKwhFromH3"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="631" />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">kWh Од - ВТ4</label>
+                                    <input type="number" name="rangeKwhFromH4" id="rangeKwhFromH4"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="1051" />
+                                </div>
+
+                                <div class="md:col-span-1">
+
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">kWh До - ВТ1</label>
+                                    <input type="number" name="rangeKwhToH1" id="rangeKwhToH1"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="210" />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">kWh До - ВТ2</label>
+                                    <input type="number" name="rangeKwhToH2" id="rangeKwhToH2"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="630" />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">kWh До - ВТ3</label>
+                                    <input type="number" name="rangeKwhToH3" id="rangeKwhToH3"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="1050" />
+                                </div>
+
+                                <div class="md:col-span-1">
+
+                                </div>
+
+                                <div class="md:col-span-3">
+                                    <label for="full_name">Надоместок за пренос и дистрибуција</label>
+                                    <input type="number" name="priceTransport" id="priceTransport"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="2.6795" />
+                                </div>
+
+                                <div class="md:col-span-2">
+                                    <label for="full_name">ДДВ</label>
+                                    <input type="text" name="pricePDV" id="pricePDV"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="10%" />
+                                </div>
+
+                                <div class="md:col-span-5 relative flex py-5 items-center">
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                    <span class="flex-shrink mx-4 text-gray-400">Пресметки</span>
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно ВТ1 kWh</label>
+                                    <input type="number" name="totalKwhH1" id="totalKwhH1"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно ВТ2 kWh</label>
+                                    <input type="number" name="totalKwhH2" id="totalKwhH2"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно ВТ3 kWh</label>
+                                    <input type="number" name="totalKwhH3" id="totalKwhH3"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно ВТ4 kWh</label>
+                                    <input type="number" name="totalKwhH4" id="totalKwhH4"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно НТ kWh</label>
+                                    <input type="number" name="totalKwhL" id="totalKwhL"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно ВТ1</label>
+                                    <input type="number" name="totalH1" id="totalH1"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно ВТ2</label>
+                                    <input type="number" name="totalH2" id="totalH2"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно ВТ3</label>
+                                    <input type="number" name="totalH3" id="totalH3"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно ВТ4</label>
+                                    <input type="number" name="totalH4" id="totalH4"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно НТ</label>
+                                    <input type="number" name="totalLFinal" id="totalLFinal"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-5 relative flex py-5 items-center">
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                    <span class="flex-shrink mx-4 text-gray-400">Вкупно</span>
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно kWh</label>
+                                    <input type="number" name="totalKwh" id="totalKwh"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">Вкупно ВТ + НТ</label>
+                                    <input type="number" name="totalHPlusL" id="totalHPlusL"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1">
+                                    <label for="full_name">ВТ + НТ + ДДВ</label>
+                                    <input type="number" name="totalHPlusLPlusPDV" id="totalHPlusLPlusPDV"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1 text-amber-400">
+                                    <label for="full_name">Вкупно</label>
+                                    <input type="number" name="total" id="total"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+                                <div class="md:col-span-1 text-rose-700">
+                                    <label for="full_name">Вкупно + Такса</label>
+                                    <input type="number" name="totalPlusTax" id="totalPlusTax"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="lg:col-span-2">
+                        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+
+                            <div class="md:col-span-5 relative flex py-5 items-center">
+                                <div class="flex-grow border-t border-gray-400"></div>
+                                <span class="flex-shrink mx-4 text-gray-400">Потрошено</span>
+                                <div class="flex-grow border-t border-gray-400"></div>
+                            </div>
+
+
+                            <div class="md:col-span-2 text-emerald-700">
+                                <label for="full_name">Вкупно скапа тарифа</label>
+                                <input type="number" name="totalH" id="totalH"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="0" />
+                            </div>
+
+                            <div class="md:col-span-2 text-emerald-700">
+                                <label for="full_name">Вкупно евтина тарифа</label>
+                                <input type="number" name="totalL" id="totalL"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="0" />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно такса</label>
+                                <input type="number" name="priceTax" id="priceTax"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="184" />
+                            </div>
+
+                            <div class="md:col-span-5 relative flex py-5 items-center">
+                                <div class="flex-grow border-t border-gray-400"></div>
+                                <span class="flex-shrink mx-4 text-gray-400">Моментални цени (ден/kWh)</span>
+                                <div class="flex-grow border-t border-gray-400"></div>
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Цена ВТ1</label>
+                                <input type="number" name="priceH1" id="priceH1"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="4.7257" />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Цена ВТ2</label>
+                                <input type="number" name="priceH2" id="priceH2"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="5.1578" />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Цена ВТ3</label>
+                                <input type="number" name="priceH3" id="priceH3"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="6.0563" />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Цена ВТ4</label>
+                                <input type="number" name="priceH4" id="priceH4"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="16.1336" />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Цена НТ</label>
+                                <input type="number" name="priceL" id="priceL"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="1.3183" />
+                            </div>
+
+                            <div class="md:col-span-1">
+
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">kWh Од - ВТ2</label>
+                                <input type="number" name="rangeKwhFromH2" id="rangeKwhFromH2"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="211" />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">kWh Од - ВТ3</label>
+                                <input type="number" name="rangeKwhFromH3" id="rangeKwhFromH3"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="631" />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">kWh Од - ВТ4</label>
+                                <input type="number" name="rangeKwhFromH4" id="rangeKwhFromH4"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="1051" />
+                            </div>
+
+                            <div class="md:col-span-1">
+
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">kWh До - ВТ1</label>
+                                <input type="number" name="rangeKwhToH1" id="rangeKwhToH1"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="210" />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">kWh До - ВТ2</label>
+                                <input type="number" name="rangeKwhToH2" id="rangeKwhToH2"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="630" />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">kWh До - ВТ3</label>
+                                <input type="number" name="rangeKwhToH3" id="rangeKwhToH3"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="1050" />
+                            </div>
+
+                            <div class="md:col-span-1">
+
+                            </div>
+
+                            <div class="md:col-span-3">
+                                <label for="full_name">Надоместок за пренос и дистрибуција</label>
+                                <input type="number" name="priceTransport" id="priceTransport"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="2.6795" />
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="full_name">ДДВ</label>
+                                <input type="text" name="pricePDV" id="pricePDV"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="10%" />
+                            </div>
+
+                            <div class="md:col-span-5 relative flex py-5 items-center">
+                                <div class="flex-grow border-t border-gray-400"></div>
+                                <span class="flex-shrink mx-4 text-gray-400">Пресметки</span>
+                                <div class="flex-grow border-t border-gray-400"></div>
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно ВТ1 kWh</label>
+                                <input type="number" name="totalKwhH1" id="totalKwhH1"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно ВТ2 kWh</label>
+                                <input type="number" name="totalKwhH2" id="totalKwhH2"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно ВТ3 kWh</label>
+                                <input type="number" name="totalKwhH3" id="totalKwhH3"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно ВТ4 kWh</label>
+                                <input type="number" name="totalKwhH4" id="totalKwhH4"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно НТ kWh</label>
+                                <input type="number" name="totalKwhL" id="totalKwhL"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно ВТ1</label>
+                                <input type="number" name="totalH1" id="totalH1"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно ВТ2</label>
+                                <input type="number" name="totalH2" id="totalH2"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно ВТ3</label>
+                                <input type="number" name="totalH3" id="totalH3"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно ВТ4</label>
+                                <input type="number" name="totalH4" id="totalH4"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно НТ</label>
+                                <input type="number" name="totalLFinal" id="totalLFinal"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-5 relative flex py-5 items-center">
+                                <div class="flex-grow border-t border-gray-400"></div>
+                                <span class="flex-shrink mx-4 text-gray-400">Вкупно</span>
+                                <div class="flex-grow border-t border-gray-400"></div>
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно kWh</label>
+                                <input type="number" name="totalKwh" id="totalKwh"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">Вкупно ВТ + НТ</label>
+                                <input type="number" name="totalHPlusL" id="totalHPlusL"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label for="full_name">ВТ + НТ + ДДВ</label>
+                                <input type="number" name="totalHPlusLPlusPDV" id="totalHPlusLPlusPDV"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1 text-amber-400">
+                                <label for="full_name">Вкупно</label>
+                                <input type="number" name="total" id="total"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+                            <div class="md:col-span-1 text-rose-700">
+                                <label for="full_name">Вкупно + Такса</label>
+                                <input type="number" name="totalPlusTax" id="totalPlusTax"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" disabled />
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <a href="http://mirchetoshevski.net/" >Homepage</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('input').change(function () {
+            calculate();
+        });
+
+        var urlH = getUrlParameter('high');
+        var urlL = getUrlParameter('low');
+
+        if (urlH) set('totalH', urlH);
+        if (urlL) set('totalL', urlL);
+
+        calculate();
+    });
+
+    function calculate() {
+        var totalH = Number($('#totalH').val());
+        var totalL = Number($('#totalL').val());
+        var runningHTotal = totalH;
+        set('totalKwh', totalH + totalL);
+        set('totalKwhL', totalL);
+
+        var priceH1 = Number($('#priceH1').val());
+        var priceH2 = Number($('#priceH2').val());
+        var priceH3 = Number($('#priceH3').val());
+        var priceH4 = Number($('#priceH4').val());
+        var priceL = Number($('#priceL').val());
+
+        var priceTransport = Number($('#priceTransport').val());
+        var pricePDV = Number($('#pricePDV').val().replace('%', ''));
+
+        var pdvPerc = pricePDV / 100 + 1;
+
+        // Total L Final
+        var totalLFinal = priceL * totalL;
+        set('totalLFinal', totalLFinal);
+
+        // Total HX
+        var totalH1 = calculateBlock("H1", runningHTotal, 0, 1);
+        var totalH2 = calculateBlock("H2", runningHTotal, 0, 1);
+        var totalH3 = calculateBlock("H3", runningHTotal, 0, 1);
+        var totalH4 = calculateBlock("H4", runningHTotal, 0, 1);
+
+        // Total H final
+        var totalHFinal = totalH1.price + totalH2.price + totalH3.price + totalH4.price;
+        var totalHkWhFinal = totalH1.kwh + totalH2.kwh + totalH3.kwh + totalH4.kwh;
+
+        // Total
+        set('totalHPlusL', totalHFinal + totalLFinal);
+        var totalPdv = (totalHkWhFinal + totalL) * priceTransport;
+        set('totalHPlusLPlusPDV', totalHFinal + totalLFinal + totalPdv);
+        var totalFinal = (totalLFinal + totalHFinal + totalPdv) * pdvPerc;
+        set('total', totalFinal < 0 ? 0 : totalFinal);
+
+        var priceTax = Number($('#priceTax').val());
+        set('totalPlusTax', totalFinal < 0 ? 0 : (totalFinal + priceTax));
+    }
+
+    function calculateBlock(block, runningHTotal, priceTransport, pdvPerc) {
+        var rangeKwhFromH1 = (block == "H1") ? 0 : Number($('#rangeKwhFrom' + block).val()) - 1;
+        var rangeKwhToH1 = (block == "H4") ? Number.MAX_VALUE : Number($('#rangeKwhTo' + block).val());
+        var priceH1 = Number($('#price' + block).val());
+
+        var h1Final = 0;
+        var h1PriceFinal = 0;
+
+        if (runningHTotal > rangeKwhToH1) { // first block filled
+            h1Final = rangeKwhToH1 - rangeKwhFromH1;
+        } else {
+            h1Final = runningHTotal - rangeKwhFromH1;
+        }
+
+        h1Final = h1Final < 0 ? 0 : h1Final;
+
+        h1PriceFinal = (priceH1 + priceTransport) * h1Final * pdvPerc;
+        //runningHTotal = (runningHTotal - h1Final) > 0 ? (runningHTotal - h1Final) : 0;
+
+        set('totalKwh' + block, h1Final);
+        set('total' + block, h1PriceFinal);
+
+        return {
+            kwh: h1Final,
+            price: h1PriceFinal
+        };
+    }
+
+    function set(id, val) {
+        $('#' + id).val(Math.round(val));
+    }
+
+    function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+        return null;
+    };
+</script>
+
+</html>
