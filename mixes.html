@@ -8,9 +8,22 @@
         }
 
         .wrapper {
-            max-width: 40%;
-            min-width: 500px;
+            width: 100%;
             margin: auto;
+        }
+
+        @media only screen and (max-device-width: 1024px) {
+            .wrapper {
+                width: 100%;
+                margin: auto;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .wrapper {
+                width: 40%;
+                margin: auto;
+            }
         }
 
         body {
