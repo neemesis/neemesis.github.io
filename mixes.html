@@ -1,232 +1,168 @@
 <html>
 
 <head>
-    <title>Mixes</title>
-    <style>
-        .entry {
-            padding: 5px;
-            box-shadow: 2px;
-        }
+        <title>Mixes</title>
+        <style>
+                .entry {
+                        margin: 5px;
+                        box-shadow: 2px;
+                }
 
-        .wrapper {
-            width: 100%;
-            margin: auto;
-        }
+                .wrapper {
+                        width: 100%;
+                        margin: auto;
+                }
 
-        @media only screen and (max-device-width: 1500px) {
-            .wrapper {
-                width: 100%;
-                margin: auto;
-            }
-        }
+                @media only screen and (max-device-width: 1500px) {
+                        .wrapper {
+                                width: 100%;
+                                margin: auto;
+                        }
+                }
 
-        @media only screen and (min-width: 1500px) {
-            .wrapper {
-                width: 40%;
-                margin: auto;
-            }
-        }
+                @media only screen and (min-width: 1500px) {
+                        .wrapper {
+                                width: 40%;
+                                margin: auto;
+                        }
+                }
 
-        body {
-            background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 10s ease infinite;
-            height: 100vh;
-        }
+                body {
+                        background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                        background-size: 400% 400%;
+                        animation: gradient 10s ease infinite;
+                        height: 100vh;
+                }
 
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
+                @keyframes gradient {
+                        0% {
+                                background-position: 0% 50%;
+                        }
 
-            50% {
-                background-position: 100% 50%;
-            }
+                        50% {
+                                background-position: 100% 50%;
+                        }
 
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+                        100% {
+                                background-position: 0% 50%;
+                        }
+                }
 
-        ::-webkit-scrollbar {
-            width: 20px;
-            color: transparent;
-        }
+                ::-webkit-scrollbar {
+                        width: 20px;
+                        color: transparent;
+                }
 
-        ::-webkit-scrollbar-track {
-            background-color: black;
-        }
+                ::-webkit-scrollbar-track {
+                        background-color: black;
+                }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #d6dee1;
-            border-radius: 20px;
-            border: 6px solid transparent;
-            background-clip: content-box;
-        }
+                ::-webkit-scrollbar-thumb {
+                        background-color: #d6dee1;
+                        border-radius: 20px;
+                        border: 6px solid transparent;
+                        background-clip: content-box;
+                }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #a8bbbf;
-        }
-    </style>
+                ::-webkit-scrollbar-thumb:hover {
+                        background-color: #a8bbbf;
+                }
+
+                a {
+                        color: #000;
+                        position: relative;
+                        text-decoration: none;
+                        text-align: center;
+                        display: block;
+                        margin: 5px;
+                }
+
+                a::before {
+                        background: hsl(45 100% 70%);
+                        content: "";
+                        inset: 0;
+                        position: absolute;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.5s ease-in-out;
+                        z-index: -1;
+                }
+
+                a:hover::before {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                }
+
+                body {
+                        font-family: system-ui, sans;
+                        font-size: 3.5rem;
+                        font-weight: 800;
+                        height: 100vh;
+                        place-items: center;
+                }
+        </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="entry"><iframe scrolling="no" id="hearthis_at_track_8629467" width="100%" height="150"
-                src="https://app.hearthis.at/embed/8629467/transparent_black/?hcolor=&color=&style=1&block_size=6&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css="
-                frameborder="0" allowtransparency allow="autoplay">
-                <p>Listen to <a href="https://hearthis.at/neemesis/nl2mp3/" target="_blank">Session #61</a>
-                    <span>by</span><a href="https://hearthis.at/neemesis/" target="_blank">Mirche Toshevski</a>
-                    <span>on</span> <a href="https://hearthis.at/" target="_blank">hearthis.at</a></p>
-            </iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-60%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-59%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-58%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-57%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-56%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-55%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-54%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-53%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-52%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-51%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-50%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-49%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-48%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-47%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-46%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-45%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-44%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-43%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-42%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-41%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-40%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-39%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-38%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-37%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-36%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-35%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-34%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-33%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-32%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-31%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-30%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-29%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-28%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-27%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-26%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-25%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-24%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-23%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-22%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-21%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-20%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-19%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-18%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-17%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-16%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-15%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-14%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-13%2F"
-                frameborder="0"></iframe></div>
-        <div class="entry"><iframe width="100%" height="120"
-                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-12%2F"
-                frameborder="0"></iframe></div>
-    </div>
+        <div class="wrapper">
+                <div class="entry" style="background-color: black;"><iframe scrolling="no"
+                                id="hearthis_at_user_neemesis" width="100%" height="350"
+                                src="https://app.hearthis.at/neemesis/embed/?hcolor=ba1010&css=&skin=black"
+                                frameborder="0"></iframe></div>
+                <div class="entry"><iframe width="100%" height="120"
+                                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-60%2F"
+                                frameborder="0"></iframe></div>
+                <div class="entry"><iframe width="100%" height="120"
+                                src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fneeemesis%2Fsession-59%2F"
+                                frameborder="0"></iframe></div>
+                <a href="https://www.mixcloud.com/neeemesis/session-58/" target="_blank">Session #58</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-57/" target="_blank">Session #57</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-56/" target="_blank">Session #56</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-55/" target="_blank">Session #55</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-54/" target="_blank">Session #54</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-53/" target="_blank">Session #53</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-52/" target="_blank">Session #52</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-51/" target="_blank">Session #51</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-50/" target="_blank">Session #50</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-49/" target="_blank">Session #49</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-48/" target="_blank">Session #48</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-47/" target="_blank">Session #47</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-46/" target="_blank">Session #46</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-45/" target="_blank">Session #45</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-44/" target="_blank">Session #44</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-43/" target="_blank">Session #43</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-42/" target="_blank">Session #42</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-41/" target="_blank">Session #41</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-40/" target="_blank">Session #40</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-39/" target="_blank">Session #39</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-38/" target="_blank">Session #38</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-37/" target="_blank">Session #37</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-36/" target="_blank">Session #36</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-35/" target="_blank">Session #35</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-34/" target="_blank">Session #34</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-33/" target="_blank">Session #33</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-32/" target="_blank">Session #32</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-31/" target="_blank">Session #31</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-30/" target="_blank">Session #30</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-29/" target="_blank">Session #29</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-28/" target="_blank">Session #28</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-27/" target="_blank">Session #27</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-26/" target="_blank">Session #26</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-25/" target="_blank">Session #25</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-24/" target="_blank">Session #24</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-23/" target="_blank">Session #23</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-22/" target="_blank">Session #22</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-21/" target="_blank">Session #21</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-20/" target="_blank">Session #20</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-19/" target="_blank">Session #19</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-18/" target="_blank">Session #18</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-17/" target="_blank">Session #17</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-16/" target="_blank">Session #16</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-15/" target="_blank">Session #15</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-14/" target="_blank">Session #14</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-13/" target="_blank">Session #13</a>
+                <a href="https://www.mixcloud.com/neeemesis/session-12/" target="_blank">Session #12</a>
+        </div>
 </body>
 
 </html>
