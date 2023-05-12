@@ -10,9 +10,9 @@ image-sm: /assets/covers/c5s.jpg
 ---
 
 ## Previous posts
-* [**Part 1 - Installation and Intro**](http://mirchetoshevski.com/blog/2017/12/17/sharpening-fsharp-part1/)
+* [**Part 1 - Installation and Intro**](http://mirchetoshevski.net/blog/2017/12/17/sharpening-fsharp-part1/)
 * **Part 2 - Records, lists, sequences…**
-* [**Part 3 - Sample App: Consuming REST service**](http://mirchetoshevski.com/blog/2017/12/24/sharpening-fsharp-part3/)
+* [**Part 3 - Sample App: Consuming REST service**](http://mirchetoshevski.net/blog/2017/12/24/sharpening-fsharp-part3/)
 
 ## Intro 
 This post will be extension to the previous one, as we will continue to explore other features of **F#**.

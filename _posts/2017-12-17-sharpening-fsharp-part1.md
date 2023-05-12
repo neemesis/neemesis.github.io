@@ -11,8 +11,8 @@ image-sm: /assets/covers/c9s.jpg
 
 ## Posts
 * **Part 1 - Installation and Intro**
-* [**Part 2 - Records, lists, sequences…**](http://mirchetoshevski.com/blog/2017/12/17/sharpening-fsharp-part2/)
-* [**Part 3 - Sample App: Consuming REST service**](http://mirchetoshevski.com/blog/2017/12/24/sharpening-fsharp-part3/)
+* [**Part 2 - Records, lists, sequences…**](http://mirchetoshevski.net/blog/2017/12/17/sharpening-fsharp-part2/)
+* [**Part 3 - Sample App: Consuming REST service**](http://mirchetoshevski.net/blog/2017/12/24/sharpening-fsharp-part3/)
 
 ## Intro 
 **F#** is mature, open source, cross-platform, functional programming language. **F#** is developed by [**F# Software Foundation**](http://foundation.fsharp.org/) and [**Microsoft**](https://docs.microsoft.com/en-us/dotnet/fsharp/). **F#** is a **meta language** and is implementation of **OCaml** for **.NET framework**. You can read more about it at [**Wikipedia**](https://goo.gl/D5S3r1) and [**F# Software Foundation**](http://fsharp.org/).

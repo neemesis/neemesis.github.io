@@ -10,8 +10,8 @@ image-sm: /assets/covers/c11s.jpeg
 ---
 ## Previous posts
 
-* [**Part 1 - Installation and Intro**](http://mirchetoshevski.com/blog/2017/12/17/sharpening-fsharp-part1/)
-* [**Part 2 - Records, lists, sequences…**](http://mirchetoshevski.com/blog/2017/12/17/sharpening-fsharp-part2/)
+* [**Part 1 - Installation and Intro**](http://mirchetoshevski.net/blog/2017/12/17/sharpening-fsharp-part1/)
+* [**Part 2 - Records, lists, sequences…**](http://mirchetoshevski.net/blog/2017/12/17/sharpening-fsharp-part2/)
 * **Part 3 - Sample App: Consuming REST service**
 
 ## Intro
