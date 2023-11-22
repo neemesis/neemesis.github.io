@@ -42,18 +42,6 @@
 			}
 
 			try {
-				window.Telegram.WebApp.sendData({ data: queryString + "_" + color.hex});
-			} catch (error) {
-				alert(error);
-			}
-
-			try {
-				window.Telegram.WebApp.sendData(color);
-			} catch (error) {
-				alert(error);
-			}
-
-			try {
 				window.Telegram.WebApp.close();
 			} catch (error) {
 				alert(error);
