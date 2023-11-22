@@ -34,7 +34,30 @@
 		picker.onDone = function(color) {
 			const queryString = window.location.search.replace("?location=", "");
 			console.log(queryString + "_" + color.hex);
-			window.Telegram.WebApp.sendData(queryString + "_" + color.hex);
+			
+			try {
+				window.Telegram.WebApp.sendData(queryString + "_" + color.hex);
+			} catch (error) {
+				alert(error);
+			}
+
+			try {
+				window.Telegram.WebApp.sendData({ data: queryString + "_" + color.hex});
+			} catch (error) {
+				alert(error);
+			}
+
+			try {
+				window.Telegram.WebApp.sendData(color);
+			} catch (error) {
+				alert(error);
+			}
+
+			try {
+				window.Telegram.WebApp.close();
+			} catch (error) {
+				alert(error);
+			}
 		};
 	</script>
 	<!-- https://vanilla-picker.js.org/ -->
