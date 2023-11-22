@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
+
+  <style>
+    :root {
+      --temp-hue: 200;
+      --temp-alpha: 100%;
+      --temp-rotation: 180deg;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      padding: 2rem;
+      margin: 0;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: #dcebf3;
+      font-family: "Work Sans";
+    }
+
+    .app {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 80vmin;
+      height: 80vmin;
+      border-radius: 40px;
+      background-color: #fff;
+      flex: 0 0 auto;
+    }
+
+    .dial-container {
+      position: relative;
+    }
+
+    .dial {
+      filter: drop-shadow(-20px 30px 40px hsla(var(--temp-hue), 85%, 80%, var(--temp-alpha)));
+      position: relative;
+      z-index: 2;
+      user-select: none;
+    }
+
+    .dial__tick {
+      stroke: rgba(0, 0, 0, 0.6);
+      stroke-width: 1;
+    }
+
+    .dial__center {
+      fill: #fff;
+      /*   filter: drop-shadow(20px 30px 40px rgb(10, 10, 10)); */
+    }
+
+    .dial__temp {
+      font-size: 2.5rem;
+      font-weight: 400;
+      fill: #29273e;
+      dominant-baseline: central;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .dial__track {
+      fill: none;
+      transform-origin: 50% 50%;
+    }
+
+    .dial__temp-units {
+      fill: #b5b4bc;
+    }
+
+    .dial__dot {
+      fill: #29273e;
+      cursor: move;
+    }
+
+    .dial__control {
+      transform: rotate(var(--temp-rotation));
+      transform-origin: 50% 50%;
+    }
+
+    .slider-container {
+      padding: 1rem 4rem;
+    }
+
+    .slider {
+      display: block;
+      width: 100%;
+    }
+
+    .credit {
+      padding: 1rem 2rem;
+      color: #29273e;
+      text-align: center;
+    }
+
+    .credit a {
+      color: inherit;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body style="width: 100%; height:100%; position: relative;">
+
+  <main class="app">
+    <div class="dial-container">
+
+      <svg class="dial" viewBox="0 0 400 400">
+        <defs>
+          <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#e5e5e5" />
+            <stop offset="100%" stop-color="#e5e5e5" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <line class="dial__tick" x1="50%" x2="50%" y1="17%" y2="83%" />
+        <line class="dial__tick" x1="17%" x2="83%" y1="50%" y2="50%" />
+        <circle class="dial__center" id="dial-center" cx="50%" cy="50%" r="120" />
+        <text class="dial__temp" x="50%" y="50%" text-anchor="middle">
+          <tspan id="temp-display">19.3</tspan>
+          <tspan class="dial__temp-units">&deg;C</tspan>
+        </text>
+        <g class="dial__control">
+          <circle class="dial__track" cx="50%" cy="50%" r="152" stroke="url(#linear)" />
+          <circle id="temp-handle" class="dial__dot" cx="48" cy="50%" r="8" stroke="transparent" stroke-width="20">
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <script>
+    const tempDisplay = document.querySelector("#temp-display");
+    const tempHandle = document.querySelector("#temp-handle");
+    const dialCenter = document.querySelector("#dial-center");
+
+    const minTemp = 10.0;
+    const maxTemp = 32.0;
+    const tempRange = maxTemp - minTemp;
+    tempDisplay.innerHTML = getDataFromUrl("currentTemperature");
+
+    let origin = calculateRotationOrigin();
+    let rotating = false;
+
+    // Find the center of the dial to use as rotation origin.
+    function calculateRotationOrigin() {
+      const { width, height, x, y } = dialCenter.getBoundingClientRect();
+      return {
+        x: x + width / 2,
+        y: y + height / 2
+      };
+    }
+
+    function handleMouseDown(event) {
+      rotating = true;
+    }
+
+    function handleMouseMove(event) {
+      if (rotating) {
+        const { clientX, clientY } = event;
+        rotate(clientX, clientY);
+      }
+    }
+
+    function handleTouchMove(event) {
+      if (rotating) {
+        event.preventDefault();
+        const { touches: { 0: { clientX, clientY } } } = event;
+        rotate(clientX, clientY);
+      }
+    }
+
+    function getDataFromUrl(name) {
+      query = window.location.search.replace("?", "");
+      split = query.split("&");
+
+      var search = split.find((element) => element.startsWith(name + "="));
+
+      return search.replace(name + "=", "");
+    }
+
+    function sendToTelegram(data) {
+      try {
+        window.Telegram.WebApp.sendData(data);
+      } catch (error) {
+        alert(error);
+      }
+
+      try {
+        window.Telegram.WebApp.close();
+      } catch (error) {
+        alert(error);
+      }
+    }
+
+    function handleMouseUp(event) {
+      rotating = false;
+
+      console.log(getDataFromUrl("location") + "_" + tempDisplay.innerHTML);
+
+      sendToTelegram(getDataFromUrl("location") + "_" + tempDisplay.innerHTML);
+    }
+
+    // Calculate the new angle based on the x,y of the Mouse/TouchEvent
+    function rotate(x, y) {
+      const angle = Math.atan2(y - origin.y, x - origin.x);
+      const angleDegrees = 180 + angle * 180 / Math.PI;
+      updateDial(angleDegrees);
+    }
+
+    // Update dial text and CSS custom properties to display the new state
+    function updateDial(angle) {
+      const percentageOfFullRange = ((360 + (angle - 90)) % 360) / 360;
+      const newTemp = (minTemp + tempRange * percentageOfFullRange).toFixed(1);
+      const hue = percentageOfFullRange < 0.5 ? 200 : 5;
+      const alpha = 40 + 2 * 45 * Math.abs(percentageOfFullRange - 0.5);
+
+      tempDisplay.innerHTML = newTemp;
+      document.documentElement.style.setProperty("--temp-rotation", `${angle}deg`);
+      document.documentElement.style.setProperty("--temp-hue", hue);
+      document.documentElement.style.setProperty("--temp-alpha", `${alpha}%`);
+    }
+
+    tempHandle.addEventListener("mousedown", handleMouseDown);
+    tempHandle.addEventListener("touchstart", handleMouseDown);
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+    document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("touchend", handleMouseUp);
+
+    window.addEventListener("resize", () => {
+      origin = calculateRotationOrigin();
+    });
+
+  </script>
+
+</body>
+
+</html>
