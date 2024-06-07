@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title>Weird GUID Generator</title>
+    <meta name="description" content="Weird GUID generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:title" property="og:title" content="Weird GUID generator">
+    <meta name="keywords" content="fu, guid, generator">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2XJPRV49W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-K2XJPRV49W');
+    </script>
+</head>
+
+<body>
+    <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+        <div class="container max-w-screen-lg mx-auto">
+            <div>
+                <!-- <h2 class="font-semibold text-xl text-gray-600">Калкулатор на струја</h2>
+                <p class="text-gray-500 mb-6">Form is mobile responsive. Give it a try.</p> -->
+
+                <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+                    <div class="lg:col-span-2">
+                        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+
+                            <div class="md:col-span-5 relative flex py-5 items-center">
+                                <div class="flex-grow border-t border-gray-400"></div>
+                                <span class="flex-shrink mx-4 text-gray-400">Weird GUID Generator</span>
+                                <div class="flex-grow border-t border-gray-400"></div>
+                            </div>
+
+
+                            <div class="md:col-span-2 text-700">
+                                <label for="full_name">Enter text</label>
+                                <input type="text" name="textEntered" id="textEntered"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" />
+                            </div>
+
+                            <div class="md:col-span-3 text-700">
+                                <label for="full_name">Result</label>
+                                <input type="text" name="resultGuid" id="resultGuid"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" />
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <a href="https://mirchetoshevski.net/">Homepage</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('#textEntered').on('input', function (e) {
+            calculate();
+        });
+    });
+
+    function calculate() {
+        var textEntered = $('#textEntered').val();
+
+        const split = textEntered.split(' ').slice(0, 5);
+
+
+        const p1 = fillToNumber(split[0], 8);
+        const p2 = fillToNumber(split[1], 4);
+        const p3 = fillToNumber(split[2], 4);
+        const p4 = fillToNumber(split[3], 4);
+        const p5 = fillToNumber(split[4], 12);
+
+        var val = [p1, p2, p3, p4, p5].join('-');
+
+        console.log(val);
+
+        set('resultGuid', val);
+    }
+
+    function fillToNumber(text, total, fillWith = "0") {
+        let result = "";
+
+        if (!text) text = "";
+
+        for (let i = 0; i < total; ++i) {
+            if (text.length > i) {
+                result += text[i];
+            } else {
+                result += fillWith;
+            }
+        }
+        return result;
+    }
+
+    function set(id, val) {
+        $('#' + id).val(val);
+    }
+</script>
+
+</html>
