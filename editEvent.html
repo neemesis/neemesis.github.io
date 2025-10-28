@@ -108,7 +108,18 @@
       fieldIds.forEach(id => {
         data[id] = document.getElementById(id).value;
       });
-      result.textContent = JSON.stringify(data, null, 2);
+
+      const mainEventId = getDataFromUrl("mainEventId") || "";
+      const eventId = getDataFromUrl("Id") || "";
+
+      // gather other fields
+      const values = fieldIds.map(id => document.getElementById(id).value || "");
+
+      // combine in the exact order
+      const combined = [mainEventId, eventId, ...values].join(" $$$$ ");
+
+      // show result
+      result.textContent = "ee save " + combined;
     });
 
     function getDataFromUrl(name) {
