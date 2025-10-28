@@ -148,10 +148,11 @@
                 data[id] = document.getElementById(id).value;
             });
 
-            const mainEventId = getDataFromUrl("mainEventId");
-            const eventId = getDataFromUrl("Id");
+            const mainEventId = decodeURIComponent(getDataFromUrl("mainEventId"));
+            const eventId = decodeURIComponent(getDataFromUrl("Id"));
+            const oldName = decodeURIComponent(getDataFromUrl("oldName"));
 
-            if (!mainEventId && !eventId) {
+            if (!mainEventId && !eventId && !oldName) {
                 alert("ID's missing");
                 return;
             }
@@ -163,7 +164,7 @@
             const combined = [mainEventId, eventId, ...values].join(" $$$$ ");
 
             // show result
-            sendToTelegram("ee save " + combined);
+            sendToTelegram("ee save " + combined + " $$$$ " + oldName);
         });
 
         function getDataFromUrl(name) {
