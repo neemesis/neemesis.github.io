@@ -61,6 +61,8 @@
     <main class="card">
         <h1 style="margin-top:0">Edit Event</h1>
 
+        <button type="button" id="btnSk">Set To Skopje</button>
+
         <form id="simpleForm">
             <div>
                 <label for="Country">Country</label>
@@ -109,7 +111,8 @@
 
             <div>
                 <label for="DateParsed">Date Parsed</label>
-                <input id="DateParsed" name="DateParsed" type="datetime-local" step="1" placeholder="Parsed date value" />
+                <input id="DateParsed" name="DateParsed" type="datetime-local" step="1"
+                    placeholder="Parsed date value" />
             </div>
 
             <div style="display:flex;gap:.5rem;align-items:center">
@@ -185,6 +188,16 @@
                 alert(error);
             }
         }
+
+        document.getElementById("btnSk").addEventListener("click", () => {
+            const country = document.getElementById("Country");
+            const countryIso = document.getElementById("CountryIso2");
+            const city = document.getElementById("City");
+
+            if (!country.value.trim()) country.value = "MKD";
+            if (!countryIso.value.trim()) countryIso.value = "MK";
+            if (!city.value.trim()) city.value = "Skopje";
+        });
     </script>
 </body>
 
