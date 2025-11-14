@@ -30,7 +30,9 @@
 
         input[type="text"],
         input[type="number"],
-        input[type="datetime-local"] {
+        input[type="datetime-local"],
+        input[type="date"],
+        input[type="time"] {
             width: 100%;
             padding: 0.5rem;
             border: 1px solid #ddd;
@@ -91,7 +93,9 @@
 
             <div>
                 <label for="Provider">Provider</label>
-                <input id="Provider" name="Provider" type="text" placeholder="e.g. OpenWeather" />
+                <input id="Provider" name="Provider" list="ProviderList" type="text" placeholder="e.g. beertija" />
+                <datalist id="ProviderList">
+                </datalist>
             </div>
 
             <div>
@@ -115,6 +119,7 @@
                     placeholder="Parsed date value" />
             </div>
 
+
             <div style="display:flex;gap:.5rem;align-items:center">
                 <button type="submit">Submit</button>
             </div>
@@ -136,6 +141,27 @@
             "Date",
             "DateParsed"
         ];
+
+        fetch('https://raw.githubusercontent.com/neemesis/public.stuff/refs/heads/main/providers_list.json')
+            .then(response => response.text())
+            .then(base64Data => {
+                const decodedJson = atob(base64Data);
+                const providers = JSON.parse(decodedJson);
+                const datalist = document.getElementById('ProviderList');
+                datalist.innerHTML = '';
+
+                //console.log(providers);
+
+                providers.forEach(provider => {
+                    const option = document.createElement('option');
+                    option.value = provider.Id;
+                    option.textContent = provider.Name;
+                    datalist.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching providers:', error);
+            });
 
         // Fill inputs from URL query parameters
         fieldIds.forEach(id => {
@@ -176,6 +202,7 @@
         }
 
         function sendToTelegram(data) {
+            console.log(data);
             try {
                 window.Telegram.WebApp.sendData(data);
             } catch (error) {
