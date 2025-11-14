@@ -100,7 +100,16 @@
 
             <div>
                 <label for="Type">Type</label>
-                <input id="Type" name="Type" type="text" placeholder="e.g. Rainfall" />
+                <input id="Type" name="Type" list="TypesList" type="text" placeholder="e.g. Rainfall" />
+                <datalist id="TypesList">
+                </datalist>
+            </div>
+
+            <div>
+                <label for="Category">Category</label>
+                <input id="Category" name="Category" list="CategoriesList" type="text" placeholder="e.g. Rainfall" />
+                <datalist id="CategoriesList">
+                </datalist>
             </div>
 
             <div>
@@ -137,6 +146,7 @@
             "Latitude",
             "Provider",
             "Type",
+            "Category",
             "Name",
             "Date",
             "DateParsed"
@@ -147,20 +157,56 @@
             .then(base64Data => {
                 const decodedJson = atob(base64Data);
                 const providers = JSON.parse(decodedJson);
-                const datalist = document.getElementById('ProviderList');
-                datalist.innerHTML = '';
-
-                //console.log(providers);
+                const providersDatalist = document.getElementById('ProviderList');
+                providersDatalist.innerHTML = '';
 
                 providers.forEach(provider => {
                     const option = document.createElement('option');
                     option.value = provider.Id;
                     option.textContent = provider.Name;
-                    datalist.appendChild(option);
+                    providersDatalist.appendChild(option);
                 });
             })
             .catch(error => {
                 console.error('Error fetching providers:', error);
+            });
+
+        fetch('https://raw.githubusercontent.com/neemesis/public.stuff/refs/heads/main/types_list.json')
+        .then(response => response.text())
+            .then(base64Data => {
+                const decodedJson = atob(base64Data);
+                const types = JSON.parse(decodedJson);
+                const typesDatalist = document.getElementById('TypesList');
+                typesDatalist.innerHTML = '';
+
+                types.forEach(type => {
+                    const option = document.createElement('option');
+                    option.value = type;
+                    option.textContent = type;
+                    typesDatalist.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching types:', error);
+            });
+
+        fetch('https://raw.githubusercontent.com/neemesis/public.stuff/refs/heads/main/categories_list.json')
+        .then(response => response.text())
+            .then(base64Data => {
+                const decodedJson = atob(base64Data);
+                const categories = JSON.parse(decodedJson);
+                const categoriesDatalist = document.getElementById('CategoriesList');
+                categoriesDatalist.innerHTML = '';
+
+                categories.forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category;
+                    option.textContent = category;
+                    categoriesDatalist.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching categories:', error);
             });
 
         // Fill inputs from URL query parameters
