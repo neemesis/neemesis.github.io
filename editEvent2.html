@@ -82,6 +82,18 @@
             </div>
 
             <div>
+                <label for="Location">Location</label>
+                <input id="Location" name="Location" list="LocationList" type="text" placeholder="e.g. beertija" />
+                <datalist id="LocationList">
+                </datalist>
+            </div>
+
+            <div>
+                <label for="Price">Price</label>
+                <input id="Price" name="Price" type="text" placeholder="123 mkd" />
+            </div>
+
+            <div>
                 <label for="Longitude">Longitude</label>
                 <input id="Longitude" name="Longitude" type="text" placeholder="e.g. 21.4314" />
             </div>
@@ -142,6 +154,8 @@
             "Country",
             "CountryIso2",
             "City",
+            "Location",
+            "Price",
             "Longitude",
             "Latitude",
             "Provider",
@@ -172,42 +186,61 @@
             });
 
         fetch('https://raw.githubusercontent.com/neemesis/public.stuff/refs/heads/main/types_list.json')
-        .then(response => response.text())
-            .then(base64Data => {
-                const decodedJson = atob(base64Data);
-                const types = JSON.parse(decodedJson);
-                const typesDatalist = document.getElementById('TypesList');
-                typesDatalist.innerHTML = '';
+            .then(response => response.text())
+                .then(base64Data => {
+                    const decodedJson = atob(base64Data);
+                    const types = JSON.parse(decodedJson);
+                    const typesDatalist = document.getElementById('TypesList');
+                    typesDatalist.innerHTML = '';
 
-                types.forEach(type => {
-                    const option = document.createElement('option');
-                    option.value = type;
-                    option.textContent = type;
-                    typesDatalist.appendChild(option);
+                    types.forEach(type => {
+                        const option = document.createElement('option');
+                        option.value = type;
+                        option.textContent = type;
+                        typesDatalist.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching types:', error);
                 });
-            })
-            .catch(error => {
-                console.error('Error fetching types:', error);
-            });
 
         fetch('https://raw.githubusercontent.com/neemesis/public.stuff/refs/heads/main/categories_list.json')
-        .then(response => response.text())
-            .then(base64Data => {
-                const decodedJson = atob(base64Data);
-                const categories = JSON.parse(decodedJson);
-                const categoriesDatalist = document.getElementById('CategoriesList');
-                categoriesDatalist.innerHTML = '';
+            .then(response => response.text())
+                .then(base64Data => {
+                    const decodedJson = atob(base64Data);
+                    const categories = JSON.parse(decodedJson);
+                    const categoriesDatalist = document.getElementById('CategoriesList');
+                    categoriesDatalist.innerHTML = '';
 
-                categories.forEach(category => {
-                    const option = document.createElement('option');
-                    option.value = category;
-                    option.textContent = category;
-                    categoriesDatalist.appendChild(option);
+                    categories.forEach(category => {
+                        const option = document.createElement('option');
+                        option.value = category;
+                        option.textContent = category;
+                        categoriesDatalist.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching categories:', error);
                 });
-            })
-            .catch(error => {
-                console.error('Error fetching categories:', error);
-            });
+
+        fetch('https://raw.githubusercontent.com/neemesis/public.stuff/refs/heads/main/locations_list.json')
+            .then(response => response.text())
+                .then(base64Data => {
+                    const decodedJson = atob(base64Data);
+                    const categories = JSON.parse(decodedJson);
+                    const categoriesDatalist = document.getElementById('LocationsList');
+                    categoriesDatalist.innerHTML = '';
+
+                    categories.forEach(category => {
+                        const option = document.createElement('option');
+                        option.value = category;
+                        option.textContent = category;
+                        categoriesDatalist.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching categories:', error);
+                });
 
         // Fill inputs from URL query parameters
         fieldIds.forEach(id => {
