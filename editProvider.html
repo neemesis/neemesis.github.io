@@ -118,6 +118,11 @@
                 <input id="Latitude" name="Latitude" type="number" step="any" placeholder="e.g. 41.9981" />
             </div>
 
+            <div>
+                <label for="DefaultTime">Default Time if 00:00 (format: 21:00:00 with seconds)</label>
+                <input id="DefaultTime" name="DefaultTime" type="text" placeholder="21:00:00" />
+            </div>
+
             <div style="display:flex;gap:.5rem;align-items:center">
                 <button type="submit">Submit</button>
             </div>
@@ -139,7 +144,8 @@
             "Url",
             "ImageUrl",
             "Longitude",
-            "Latitude"
+            "Latitude",
+            "DefaultTime"
         ];
 
         // Fill inputs from URL query parameters
